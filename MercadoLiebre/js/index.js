@@ -1,3 +1,5 @@
+// Calculadora de Cuota Mensual de Compra de Productos
+
 let montoTotal = 20000;
 let numeroCuotas = 10;
 let tasaInteres = 8;
@@ -8,7 +10,7 @@ function calcularCuotas(montoTotal, numeroCuotas, tasaInteres) {
   // Convertir la tasa de interés a decimal
   let tasaInteresDecimal = tasaInteres / 100;
 
-  // Calcular el valor de cada cuota utilizando la fórmula de amortización francesa
+  // Calcular el valor de cada cuota utilizando la fórmula de amortización
   let cuota =
     (montoTotal *
       tasaInteresDecimal *
