@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- esto es un comentario y no se muestra en la pagina web -->
+
+<!-- lenguaje en el que esta realizada la pagina web -->
+<html lang="es">
+  <!-- cabeza de la web, metadatos que no seran mostrados en la web pero que sirven para el rendimiento de la web y linkear otras etiquetas que veremos mas adelante -->
+  <head>
+    <!-- asegura que el navegador interprete correctamente los caracteres en la página web, lo que ayuda a evitar problemas de visualización y codificación incorrecta de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- utilizada en el desarrollo web para controlar cómo se muestra una página en dispositivos móviles. Esta etiqueta asegura que la página se ajuste al ancho de la pantalla del dispositivo y que se muestre inicialmente sin escalas, lo que proporciona una experiencia de usuario adecuada en dispositivos móviles. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descripción de la pagina web, ayuda con palabras claves para el SEO :Search Engine Optimization (Optimización para motores de búsqueda). Nos ayuda al posicionamiento de la pagina web. -->
+    <meta
+      name="description"
+      content="Descripción de nuestra página de inicio"
+    />
+    <!-- se utiliza en el desarrollo web para especificar palabras clave relacionadas con el contenido de la página. -->
+    <meta
+      name="keywords"
+      content="cursos, taller de pintura, pintura, talleres"
+    />
+    <!-- Titulo que se muestra en la solapa de la pagina web -->
+    <title>Nosotros</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/logo-favicon.jpeg"
+      type="image/x-icon"
+    />
+    <!-- fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4cb147f19a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- cabecera de la web -->
+    <header>
+      <section class="barra">
+        <figure>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="../assets/logo-mercado-liebre.svg"
+              alt="logo - mercado liebre"
+            />
+          </a>
+        </figure>
+        <div id="search">
+          <input type="text" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <!-- barra de navegacion -->
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html" target="_blank">Inicio</a>
+          </li>
+          <li>
+            <a href="./nosotros.html" target="_blank">Nosotros</a>
+          </li>
+          <li>
+            <a href="./ofertas.html" target="_blank">Ofertas</a>
+          </li>
+          <li>
+            <a href="./crearCuenta.html" target="_blank">Crear Cuenta</a>
+          </li>
+          <li>
+            <a href="./contacto.html" target="_blank">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <figure class="banner">
+        <img src="../assets/home-banner.jpg" alt="banner" />
+      </figure>
+      <h1>Nosotros</h1>
+
+      <h2>Tabla HTML</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Título 1</th>
+            <th>Título 2</th>
+            <th>Título 3</th>
+            <th>Título 4</th>
+            <th>Título 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fila 1, Celda 1</td>
+            <td>Fila 1, Celda 2</td>
+            <td>Fila 1, Celda 3</td>
+            <td>Fila 1, Celda 4</td>
+            <td>Fila 1, Celda 5</td>
+          </tr>
+          <tr>
+            <td>Fila 2, Celda 1</td>
+            <td>Fila 2, Celda 2</td>
+            <td>Fila 2, Celda 3</td>
+            <td>Fila 2, Celda 4</td>
+            <td>Fila 2, Celda 5</td>
+          </tr>
+          <tr>
+            <td>Fila 3, Celda 1</td>
+            <td>Fila 3, Celda 2</td>
+            <td>Fila 3, Celda 3</td>
+            <td>Fila 3, Celda 4</td>
+            <td>Fila 3, Celda 5</td>
+          </tr>
+          <tr>
+            <td>Fila 4, Celda 1</td>
+            <td>Fila 4, Celda 2</td>
+            <td>Fila 4, Celda 3</td>
+            <td>Fila 4, Celda 4</td>
+            <td>Fila 4, Celda 5</td>
+          </tr>
+          <tr>
+            <td>Fila 5, Celda 1</td>
+            <td>Fila 5, Celda 2</td>
+            <td>Fila 5, Celda 3</td>
+            <td>Fila 5, Celda 4</td>
+            <td>Fila 5, Celda 5</td>
+          </tr>
+          <tr>
+            <td>Fila 6, Celda 1</td>
+            <td>Fila 6, Celda 2</td>
+            <td>Fila 6, Celda 3</td>
+            <td>Fila 6, Celda 4</td>
+            <td>Fila 6, Celda 5</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- grid -->
+      <!-- grilla simple -->
+      <section id="grid">
+        <div class="grid-item-impar">
+          <img src="../assets/cafetera-moulinex.jpg" alt="" />
+        </div>
+        <div class="grid-item-par">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            doloremque voluptatem ut quae sequi facere, rem, velit
+            exercitationem ea obcaecati dolores voluptates porro recusandae
+            magnam repudiandae iusto culpa cumque sunt!
+          </p>
+        </div>
+        <div class="grid-item-impar">
+          <img src="../assets/samsung-galaxy-s10.jpg" alt="" />
+        </div>
+        <div class="grid-item-par">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            corporis aliquam aperiam illum at, iusto quo eligendi asperiores
+            totam pariatur rem ratione, laboriosam, unde facilis odit fuga
+            assumenda odio animi.
+          </p>
+        </div>
+        <div class="grid-item-impar">
+          <img src="../assets/tv-samsung-smart.jpg" alt="" />
+        </div>
+        <div id="prueba">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+            consectetur reiciendis culpa vitae dicta? Unde inventore magni nisi
+            perspiciatis, laborum, possimus iste voluptas vitae, ipsa voluptatem
+            eius sit voluptate iure.
+          </p>
+        </div>
+      </section>
+
+      <!-- grid area -->
+
+      <section id="grid-area">
+        <div id="nav">
+          <h5>Barra de navegacion</h5>
+          <img src="" alt="esto es una imagen" />
+        </div>
+        <div id="nosotros">
+          <h5>Nosotros</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            accusamus provident cum eos non cupiditate. Cumque, ex doloribus
+            nesciunt illo quod maiores aut enim odit at nisi amet, mollitia
+            ipsum.
+          </p>
+        </div>
+        <div id="publicidad">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit obcaecati nisi neque aliquid
+          </p>
+        </div>
+        <div id="servicios">
+          <p>Servicios</p>
+        </div>
+        <div id="redes">
+          <p>Redes</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, odio
+            perferendis nostrum voluptate expedita sunt repellendus fuga. Eius
+            corrupti pariatur tenetur quisquam asperiores soluta, natus tempora
+            hic fugit obcaecati dignissimos?
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- pie de pagina -->
+    <footer>
+      <div>
+        <figure class="redes">
+          <i class="fa-brands fa-square-instagram fa-2xl"></i>
+        </figure>
+
+        <figure class="redes">
+          <i class="fa-brands fa-square-facebook fa-2xl"></i>
+        </figure>
+      </div>
+      <h6>Copyright 1999 - 2024 MercadadoLiebre S.R.L</h6>
+    </footer>
+  </body>
+</html>

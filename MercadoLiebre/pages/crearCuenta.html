@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- esto es un comentario y no se muestra en la pagina web -->
+
+<!-- lenguaje en el que esta realizada la pagina web -->
+<html lang="es">
+  <!-- cabeza de la web, metadatos que no seran mostrados en la web pero que sirven para el rendimiento de la web y linkear otras etiquetas que veremos mas adelante -->
+  <head>
+    <!-- asegura que el navegador interprete correctamente los caracteres en la página web, lo que ayuda a evitar problemas de visualización y codificación incorrecta de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- utilizada en el desarrollo web para controlar cómo se muestra una página en dispositivos móviles. Esta etiqueta asegura que la página se ajuste al ancho de la pantalla del dispositivo y que se muestre inicialmente sin escalas, lo que proporciona una experiencia de usuario adecuada en dispositivos móviles. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descripción de la pagina web, ayuda con palabras claves para el SEO :Search Engine Optimization (Optimización para motores de búsqueda). Nos ayuda al posicionamiento de la pagina web. -->
+    <meta
+      name="description"
+      content="Descripción de nuestra página de inicio"
+    />
+    <!-- se utiliza en el desarrollo web para especificar palabras clave relacionadas con el contenido de la página. -->
+    <meta
+      name="keywords"
+      content="cursos, taller de pintura, pintura, talleres"
+    />
+    <!-- Titulo que se muestra en la solapa de la pagina web -->
+    <title>Crear Cuenta</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/logo-favicon.jpeg"
+      type="image/x-icon"
+    />
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4cb147f19a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- cabecera de la web -->
+    <header>
+      <section class="barra">
+        <figure>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="../assets/logo-mercado-liebre.svg"
+              alt="logo - mercado liebre"
+            />
+          </a>
+        </figure>
+        <div id="search">
+          <input type="text" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <!-- barra de nacegacion -->
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html" target="_blank">Inicio</a>
+          </li>
+          <li>
+            <a href="./nosotros.html" target="_blank">Nosotros</a>
+          </li>
+          <li>
+            <a href="./ofertas.html" target="_blank">Ofertas</a>
+          </li>
+          <li>
+            <a href="./crearCuenta.html" target="_blank">Crear Cuenta</a>
+          </li>
+          <li>
+            <a href="./contacto.html" target="_blank">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <figure class="banner">
+        <img src="../assets/home-banner.jpg" alt="banner" />
+      </figure>
+
+      <h1>Crear Cuenta</h1>
+
+      <form action="#">
+        <!-- label es como el titulo del campo que el usuario va a llenar y el input es el campo que sera llenado por el usuario -->
+        <label for="">Nombre:</label>
+        <input type="text" required />
+        <br />
+        <label for="">Apellido:</label>
+        <input type="text" required />
+        <br />
+        <label for="">Edad:</label>
+        <input type="number" required />
+        <br />
+        <label for="">Correo electrónico:</label>
+        <input type="email" required />
+        <br />
+        <label>Contraseña:</label>
+        <input type="password" required />
+        <br />
+        <label>Sitio web:</label>
+        <input type="url" />
+        <br />
+        <label>Teléfono:</label>
+        <input type="tel" />
+        <br />
+        <label>Fecha:</label>
+        <input type="date" />
+        <br />
+        <label for="hora">Hora:</label>
+        <input type="time" />
+        <br />
+        <label for="">Color</label>
+        <input type="color" />
+        <br />
+
+        <label>Paises:</label>
+        <select>
+          <option>Colombia</option>
+          <option>Peru</option>
+          <option>Uruguay</option>
+          <option>Argentina</option>
+        </select>
+        <br />
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"> </textarea>
+        <br />
+
+        <label>Género:</label><br />
+        <input type="checkbox" />
+        <label for="masculino">Masculino</label>
+        <br />
+        <input type="checkbox" />
+        <label for="femenino">Femenino</label>
+        <br />
+        <label>Género:</label><br />
+        <input type="radio" />
+        <label for="masculino">Masculino</label><br />
+        <input type="radio" />
+        <label for="femenino">Femenino</label><br />
+
+        <label>Preferencias:</label><br />
+        <input
+          type="checkbox"
+          id="deporte"
+          name="preferencias"
+          value="deporte"
+        />
+        <label for="deporte">Deporte</label><br />
+        <input
+          type="checkbox"
+          id="lectura"
+          name="preferencias"
+          value="lectura"
+        />
+        <label for="lectura">Lectura</label><br />
+        <input type="checkbox" id="viajes" name="preferencias" value="viajes" />
+        <label for="viajes">Viajes</label><br />
+
+        <button>
+          Enviar
+          <i class="fa-solid fa-star"></i>
+        </button>
+      </form>
+    </main>
+    <!-- pie de pagina -->
+    <footer>
+      <div>
+        <figure class="redes">
+          <i class="fa-brands fa-square-instagram fa-2xl"></i>
+        </figure>
+
+        <figure class="redes">
+          <i class="fa-brands fa-square-facebook fa-2xl"></i>
+        </figure>
+      </div>
+      <h6>Copyright 1999 - 2024 MercadadoLiebre S.R.L</h6>
+    </footer>
+  </body>
+</html>

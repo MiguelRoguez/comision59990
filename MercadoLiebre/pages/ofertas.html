@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- esto es un comentario y no se muestra en la pagina web -->
+
+<!-- lenguaje en el que esta realizada la pagina web -->
+<html lang="es">
+  <!-- cabeza de la web, metadatos que no seran mostrados en la web pero que sirven para el rendimiento de la web y linkear otras etiquetas que veremos mas adelante -->
+  <head>
+    <!-- asegura que el navegador interprete correctamente los caracteres en la página web, lo que ayuda a evitar problemas de visualización y codificación incorrecta de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- utilizada en el desarrollo web para controlar cómo se muestra una página en dispositivos móviles. Esta etiqueta asegura que la página se ajuste al ancho de la pantalla del dispositivo y que se muestre inicialmente sin escalas, lo que proporciona una experiencia de usuario adecuada en dispositivos móviles. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descripción de la pagina web, ayuda con palabras claves para el SEO :Search Engine Optimization (Optimización para motores de búsqueda). Nos ayuda al posicionamiento de la pagina web. -->
+    <meta
+      name="description"
+      content="Descripción de nuestra página de inicio"
+    />
+    <!-- se utiliza en el desarrollo web para especificar palabras clave relacionadas con el contenido de la página. -->
+    <meta
+      name="keywords"
+      content="cursos, taller de pintura, pintura, talleres"
+    />
+    <!-- Titulo que se muestra en la solapa de la pagina web -->
+    <title>Ofertas</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="../assets/logo-favicon.jpeg"
+      type="image/x-icon"
+    />
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4cb147f19a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- cabecera de la web -->
+    <header>
+      <section class="barra">
+        <figure>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="../assets/logo-mercado-liebre.svg"
+              alt="logo - mercado liebre"
+            />
+          </a>
+        </figure>
+        <div id="search">
+          <input type="text" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <!-- barra de navegacion -->
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html" target="_blank">Inicio</a>
+          </li>
+          <li>
+            <a href="./nosotros.html" target="_blank">Nosotros</a>
+          </li>
+          <li>
+            <a href="./ofertas.html" target="_blank">Ofertas</a>
+          </li>
+          <li>
+            <a href="./crearCuenta.html" target="_blank">Crear Cuenta</a>
+          </li>
+          <li>
+            <a href="./contacto.html" target="_blank">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- centro de la web -->
+    <main>
+      <figure class="banner">
+        <img src="../assets/home-banner.jpg" alt="banner" />
+      </figure>
+
+      <h1><a href="../index.html#ofertas">Ofertas</a></h1>
+
+      <h2>Listas en HTML</h2>
+      <!-- Lista ordenada de artículos (numéricas) -->
+      <h2>Lista Ordenada de Artículos (Numéricas)</h2>
+      <ol id="ol">
+        <li>Artículo Uno</li>
+        <li>Artículo Dos</li>
+        <li>Artículo Tres</li>
+      </ol>
+
+      <!-- Lista de artículos sin orden (viñetas) -->
+      <h2>Lista de Artículos sin Orden (Viñetas)</h2>
+      <ul id="ul">
+        <li>Artículo A</li>
+        <li>Artículo B</li>
+        <li>Artículo C</li>
+      </ul>
+
+      <!-- Lista de definiciones -->
+      <h2>Lista de Definiciones</h2>
+      <dl id="dl">
+        <dt>HTML</dt>
+        <dd>
+          Lenguaje de marcado de hipertexto utilizado para crear páginas web.
+        </dd>
+        <dt>CSS</dt>
+        <dd>
+          Lenguaje de hojas de estilo utilizado para estilizar documentos HTML.
+        </dd>
+        <dt>JavaScript</dt>
+        <dd>
+          Lenguaje de programación utilizado para agregar interactividad a
+          páginas web.
+        </dd>
+      </dl>
+
+      <!-- <dl>: Definition List
+        <dt>: Definition Term
+        <dd>: Definition Description -->
+
+      <!-- enlaces absolutos -->
+      <a
+        href="https://www.coderhouse.com/online/desarrollo-web-online"
+        target="_blank"
+        >Curso de Desarrollo Web</a
+      >
+      <!--  -->
+
+      <div class="container">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+      </div>
+    </main>
+    <!-- pie de pagina -->
+    <footer>
+      <div>
+        <figure class="redes">
+          <i class="fa-brands fa-square-instagram fa-2xl"></i>
+        </figure>
+
+        <figure class="redes">
+          <i class="fa-brands fa-square-facebook fa-2xl"></i>
+        </figure>
+      </div>
+      <h6>Copyright 1999 - 2024 MercadadoLiebre S.R.L</h6>
+    </footer>
+  </body>
+</html>

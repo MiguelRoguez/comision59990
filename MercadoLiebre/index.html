@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- esto es un comentario y no se muestra en la pagina web -->
+
+<!-- lenguaje en el que esta realizada la pagina web -->
+<html lang="es">
+  <!-- cabeza de la web, metadatos que no seran mostrados en la web pero que sirven para el rendimiento de la web y linkear otras etiquetas que veremos mas adelante -->
+  <head>
+    <!-- asegura que el navegador interprete correctamente los caracteres en la página web, lo que ayuda a evitar problemas de visualización y codificación incorrecta de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- utilizada en el desarrollo web para controlar cómo se muestra una página en dispositivos móviles. Esta etiqueta asegura que la página se ajuste al ancho de la pantalla del dispositivo y que se muestre inicialmente sin escalas, lo que proporciona una experiencia de usuario adecuada en dispositivos móviles. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Descripción de la pagina web, ayuda con palabras claves para el SEO :Search Engine Optimization (Optimización para motores de búsqueda). Nos ayuda al posicionamiento de la pagina web. -->
+    <meta
+      name="description"
+      content="Descripción de nuestra página de inicio"
+    />
+    <!-- se utiliza en el desarrollo web para especificar palabras clave relacionadas con el contenido de la página. -->
+    <meta
+      name="keywords"
+      content="cursos, taller de pintura, pintura, talleres"
+    />
+    <!-- Titulo que se muestra en la solapa de la pagina web -->
+    <title>Inicio - Mercado Liebre</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-favicon.jpeg"
+      type="image/x-icon"
+    />
+    <!-- fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- fontawesome para los iconos -->
+    <script
+      src="https://kit.fontawesome.com/4cb147f19a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- cabecera de la web -->
+    <header>
+      <section class="barra">
+        <figure>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="./assets/logo-mercado-liebre.svg"
+              alt="logo - mercado liebre"
+            />
+          </a>
+        </figure>
+        <div id="search">
+          <input type="text" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <!-- barra de navegacion -->
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html" target="_blank">Inicio</a>
+          </li>
+          <li>
+            <a href="./pages/nosotros.html" target="_blank">Nosotros</a>
+          </li>
+          <li>
+            <a href="./pages/ofertas.html" target="_blank">Ofertas</a>
+          </li>
+          <li>
+            <a href="./pages/crearCuenta.html" target="_blank">Crear Cuenta</a>
+          </li>
+          <li>
+            <a href="./pages/contacto.html" target="_blank">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <figure class="banner">
+        <img src="./assets/home-banner.jpg" alt="banner" />
+      </figure>
+      <h1>Mercado Liebre</h1>
+
+      <h2>Últimas vistas</h2>
+      <h3 id="ofertas">Mis últimas visitas</h3>
+      <h4>Space Around</h4>
+      <section id="containerSpaceAround">
+        <!-- item 1 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/cafetera-moulinex.jpg" alt="Cafetera Moulinex" />
+          </figure>
+          <p>Cafetera Moulinex</p>
+          <p>$6.700</p>
+          <p>40% OFF</p>
+        </div>
+        <!-- item 2 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/macbook-pro-2019.jpg" alt="MacBook Pro" />
+          </figure>
+          <p>$230.000</p>
+          <p>20% OFF</p>
+          <figcaption>MacBook Pro 2019</figcaption>
+        </div>
+        <!-- item 3 -->
+        <div class="card">
+          <figure class="products">
+            <img
+              src="./assets/samsung-galaxy-s10.jpg"
+              alt="Samsung Galaxy S10"
+            />
+          </figure>
+          <p>$70.000</p>
+          <p>10% OFF</p>
+          <figcaption>Samsung Galaxy S10</figcaption>
+        </div>
+        <!-- item 4 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/tv-samsung-smart.jpg" alt="TV Samsung Smart" />
+          </figure>
+          <p>$23.200</p>
+          <p>25% OFF</p>
+          <figcaption>TV Samsung 43"</figcaption>
+        </div>
+      </section>
+
+      <h4>Space Between</h4>
+      <section id="containerSpaceBetween">
+        <!-- item 1 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/cafetera-moulinex.jpg" alt="Cafetera Moulinex" />
+          </figure>
+          <p>Cafetera Moulinex</p>
+          <p>$6.700</p>
+          <p>40% OFF</p>
+        </div>
+        <!-- item 2 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/macbook-pro-2019.jpg" alt="MacBook Pro" />
+          </figure>
+          <p>$230.000</p>
+          <p>20% OFF</p>
+          <figcaption>MacBook Pro 2019</figcaption>
+        </div>
+        <!-- item 3 -->
+        <div class="card">
+          <figure class="products">
+            <img
+              src="./assets/samsung-galaxy-s10.jpg"
+              alt="Samsung Galaxy S10"
+            />
+          </figure>
+          <p>$70.000</p>
+          <p>10% OFF</p>
+          <figcaption>Samsung Galaxy S10</figcaption>
+        </div>
+        <!-- item 4 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/tv-samsung-smart.jpg" alt="TV Samsung Smart" />
+          </figure>
+          <p>$23.200</p>
+          <p>25% OFF</p>
+          <figcaption>TV Samsung 43"</figcaption>
+        </div>
+      </section>
+
+      <h4>Center</h4>
+      <section id="containerCenter">
+        <!-- item 1 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/cafetera-moulinex.jpg" alt="Cafetera Moulinex" />
+          </figure>
+          <p>Cafetera Moulinex</p>
+          <p>$6.700</p>
+          <p>40% OFF</p>
+        </div>
+        <!-- item 2 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/macbook-pro-2019.jpg" alt="MacBook Pro" />
+          </figure>
+          <p>$230.000</p>
+          <p>20% OFF</p>
+          <figcaption>MacBook Pro 2019</figcaption>
+        </div>
+        <!-- item 3 -->
+        <div class="card">
+          <figure class="products">
+            <img
+              src="./assets/samsung-galaxy-s10.jpg"
+              alt="Samsung Galaxy S10"
+            />
+          </figure>
+          <p>$70.000</p>
+          <p>10% OFF</p>
+          <figcaption>Samsung Galaxy S10</figcaption>
+        </div>
+        <!-- item 4 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/tv-samsung-smart.jpg" alt="TV Samsung Smart" />
+          </figure>
+          <p>$23.200</p>
+          <p>25% OFF</p>
+          <figcaption>TV Samsung 43"</figcaption>
+        </div>
+      </section>
+
+      <h4>Space Evenly</h4>
+      <section id="containerSpaceEvenly">
+        <!-- item 1 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/cafetera-moulinex.jpg" alt="Cafetera Moulinex" />
+          </figure>
+          <p>Cafetera Moulinex</p>
+          <p>$6.700</p>
+          <p>40% OFF</p>
+        </div>
+        <!-- item 2 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/macbook-pro-2019.jpg" alt="MacBook Pro" />
+          </figure>
+          <p>$230.000</p>
+          <p>20% OFF</p>
+          <figcaption>MacBook Pro 2019</figcaption>
+        </div>
+        <!-- item 3 -->
+        <div class="card">
+          <figure class="products">
+            <img
+              src="./assets/samsung-galaxy-s10.jpg"
+              alt="Samsung Galaxy S10"
+            />
+          </figure>
+          <p>$70.000</p>
+          <p>10% OFF</p>
+          <figcaption>Samsung Galaxy S10</figcaption>
+        </div>
+        <!-- item 4 -->
+        <div class="card">
+          <figure class="products">
+            <img src="./assets/tv-samsung-smart.jpg" alt="TV Samsung Smart" />
+          </figure>
+          <p>$23.200</p>
+          <p>25% OFF</p>
+          <figcaption>TV Samsung 43"</figcaption>
+        </div>
+      </section>
+    </main>
+    <!-- pie de pagina -->
+    <footer>
+      <div>
+        <figure class="redes">
+          <i class="fa-brands fa-square-instagram fa-2xl"></i>
+        </figure>
+
+        <figure class="redes">
+          <i class="fa-brands fa-square-facebook fa-2xl"></i>
+        </figure>
+      </div>
+      <h6>Copyright 1999 - 2024 MercadadoLiebre S.R.L</h6>
+      <!-- Esta es una nota de prueba para usar GIT -->
+      <h5>Este es mi primer comentario</h5>
+      <!-- bactis se generan con alt+96 ` ` -->
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
