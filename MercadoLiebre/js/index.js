@@ -1,3 +1,8 @@
+/*los programas son pensados para un proceso de un carrito de compras dentro de una pagina, se eligio 
+calcular el costo total de productos de acuerdo a sus cantidades y un programa para obtener cuotas 
+de acuerdo a un monto total
+*/
+
 // Programa para calcular el costo total de Productos y Cantidades que el usuario seleccione.
 
 let costoTotal = 0;
@@ -31,7 +36,7 @@ console.log("Costo total: $", costoTotal.toFixed(2));
 
 // Una vez que el programa 1 termina, ejecutamos el programa 2
 setTimeout(() => {
-  // Mensaje para indicar y verificar que inicia el programa 2
+  // Mensaje para verificar que inicia el programa 2
   console.log("¡Aqui inicia el segundo programa!");
 
   // Programa para obtener el monto total y la cantidad de cuotas que indica el usuario
