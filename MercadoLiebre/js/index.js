@@ -31,8 +31,8 @@ console.log("Costo total: $", costoTotal.toFixed(2));
 
 // Una vez que el programa 1 termina, ejecutamos el programa 2
 setTimeout(() => {
-  // Código del programa 2
-  console.log("Ahora se ejecuta el segundo programa");
+  // Mensaje para indicar y verificar que inicia el programa 2
+  console.log("¡Aqui inicia el segundo programa!");
 
   // Programa para obtener el monto total y la cantidad de cuotas que indica el usuario
   const montoTotal = parseFloat(prompt("Ingresa el monto total:"));
