@@ -1,23 +1,30 @@
-// Calculadora de Cuota Mensual de Compra de Productos
+// Progama para calcular el costo total de Productos y Cantidades que el usuario seleccione.
 
-let montoTotal = 20000;
-let numeroCuotas = 10;
-let tasaInteres = 8;
+let costoTotal = 0;
+let seguirComprando = true;
 
-let cuotaMensual = calcularCuotas(montoTotal, numeroCuotas, tasaInteres);
+//Se agrega un false al ciclo while con un 'fin' cuando ya no requiera mas producto el usuario
+while (seguirComprando) {
+  const nombreProducto = prompt(
+    "Ingrese el nombre del producto (o escribe 'fin' para terminar):"
+  );
+  //Se solicita al usuario agregar Producto y Cantidad
+  if (nombreProducto.toLowerCase() === "fin") {
+    seguirComprando = false;
+  } else {
+    const precio = parseFloat(prompt("Ingrese el precio del producto:"));
+    const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
 
-function calcularCuotas(montoTotal, numeroCuotas, tasaInteres) {
-  // Convertir la tasa de interés a decimal
-  let tasaInteresDecimal = tasaInteres / 100;
-
-  // Calcular el valor de cada cuota utilizando la fórmula de amortización
-  let cuota =
-    (montoTotal *
-      tasaInteresDecimal *
-      Math.pow(1 + tasaInteresDecimal, numeroCuotas)) /
-    (Math.pow(1 + tasaInteresDecimal, numeroCuotas) - 1);
-
-  return cuota;
+    //Inicia el calculo de los producos si el usuario no captura algo mas
+    if (!isNaN(precio) && !isNaN(cantidad)) {
+      const subtotal = precio * cantidad;
+      costoTotal += subtotal;
+      console.log(`Subtotal para ${nombreProducto}: $${subtotal.toFixed(2)}`);
+    } else {
+      //Se agrega un mensaje de error en consola en caso de algun dato invalido
+      console.error("Precio o cantidad invalidos. Ingrese solo numeros");
+    }
+  }
 }
-
-console.log("La cuota mensual es:", cuotaMensual.toFixed(2));
+//Se indica por medio de consola el el resultado de cada Captura y el Costo Total
+console.log("Costo total: $", costoTotal.toFixed(2));
