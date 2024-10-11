@@ -29,8 +29,32 @@ while (seguirComprando) {
 //Se indica por medio de consola el el resultado de cada Captura y el Costo Total
 console.log("Costo total: $", costoTotal.toFixed(2));
 
-// Una vez que el programa 1 termina, ejecuta el programa 2
+// Una vez que el programa 1 termina, ejecutamos el programa 2
 setTimeout(() => {
   // Código del programa 2
   console.log("Ahora se ejecuta el segundo programa");
+
+  // Programa para obtener el monto total y la cantidad de cuotas que indica el usuario
+  const montoTotal = parseFloat(prompt("Ingresa el monto total:"));
+  const cantidadCuotas = parseInt(
+    prompt("Ingrese la cantidad de cuotas a diferir:")
+  );
+
+  // Se validan que los datos ingresados sean corretos
+  if (isNaN(montoTotal) || isNaN(cantidadCuotas) || cantidadCuotas <= 0) {
+    console.error(
+      "Por favor, ingresa un monto y una cantidad de cuotas validos."
+    );
+  } else {
+    // Se ejecuta la formula para calcular el valor de cada cuota
+    const valorCuota = montoTotal / cantidadCuotas;
+
+    // Mostramos el resultado por medio de consola
+    console.log("El valor de cada cuota es: $" + valorCuota.toFixed(2));
+
+    // Por medio de un ciclo for se muestra un desglose de cada cuota en consola
+    for (let i = 1; i <= cantidadCuotas; i++) {
+      console.log(`Cuota ${i}: $${valorCuota.toFixed(2)}`);
+    }
+  }
 }, 0);
