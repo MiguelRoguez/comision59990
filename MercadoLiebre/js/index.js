@@ -1,4 +1,4 @@
-// Progama para calcular el costo total de Productos y Cantidades que el usuario seleccione.
+// Programa para calcular el costo total de Productos y Cantidades que el usuario seleccione.
 
 let costoTotal = 0;
 let seguirComprando = true;
@@ -28,3 +28,9 @@ while (seguirComprando) {
 }
 //Se indica por medio de consola el el resultado de cada Captura y el Costo Total
 console.log("Costo total: $", costoTotal.toFixed(2));
+
+// Una vez que el programa 1 termina, ejecuta el programa 2
+setTimeout(() => {
+  // Código del programa 2
+  console.log("Ahora se ejecuta el segundo programa");
+}, 0);
