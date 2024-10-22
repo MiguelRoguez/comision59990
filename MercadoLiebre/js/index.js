@@ -1,65 +1,111 @@
-/*los programas son pensados para un proceso de un carrito de compras dentro de una pagina, se eligio 
-calcular el costo total de productos de acuerdo a sus cantidades y un programa para obtener cuotas 
-de acuerdo a un monto total
+/*Programa que permite validar los pagos de un carrito de compras dentro de una pagina, se eligio 
+calcular el costo total de productos de acuerdo a sus cantidades y con este total verificar la cantidad cuotas 
+de acuerdo a un monto total dando un desgloce de los mismos
 */
 
-// Programa para calcular el costo total de Productos y Cantidades que el usuario seleccione.
+//funciones iniciales para calculos del programa
 
-let costoTotal = 0;
+function crearProducto(nombre, precio, cantidad) {
+  //para una validacion al generar productos
+  if (typeof precio !== "number" || typeof cantidad !== "number") {
+    throw new Error("Precio y cantidad deben ser números");
+  }
+  if (cantidad <= 0) {
+    throw new Error("La cantidad debe ser mayor que cero");
+  }
+
+  return {
+    nombre,
+    precio,
+    cantidad,
+    subtotal: precio * cantidad,
+  };
+}
+
+function dividirValores(valores, divisor) {
+  // Función para dividir las cuotas un array de valores
+  return valores.map((valor) => valor / divisor);
+}
+
+function calcularCostoTotal(productos) {
+  // Función para calcular el costo total de mi array de productos
+  return productos.reduce((total, producto) => total + producto.subtotal, 0);
+}
+
+function calcularCuotas(montoTotal, cantidadCuotas) {
+  // Función para calcular el valor de cada cuota y generar un array de cuotas
+  const valorCuota = montoTotal / cantidadCuotas;
+  return Array.from({ length: cantidadCuotas }, () => valorCuota);
+}
+
+// Aqui inicia mi programa y el array con los datos que el usuario me proporciona el usuario
+const productos = [];
+
 let seguirComprando = true;
 
-//Se agrega un false al ciclo while con un 'fin' cuando ya no requiera mas producto el usuario
 while (seguirComprando) {
   const nombreProducto = prompt(
     "Ingrese el nombre del producto (o escribe 'fin' para terminar):"
   );
-  //Se solicita al usuario agregar Producto y Cantidad
+  //con la palabra fin concluyo el proceso
   if (nombreProducto.toLowerCase() === "fin") {
     seguirComprando = false;
   } else {
     const precio = parseFloat(prompt("Ingrese el precio del producto:"));
     const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
-
-    //Inicia el calculo de los producos si el usuario no captura algo mas
     if (!isNaN(precio) && !isNaN(cantidad)) {
-      const subtotal = precio * cantidad;
-      costoTotal += subtotal;
-      console.log(`Subtotal para ${nombreProducto}: $${subtotal.toFixed(2)}`);
+      const producto = crearProducto(nombreProducto, precio, cantidad);
+      productos.push(producto);
+      console.log(
+        `Subtotal para ${producto.nombre}: $${producto.subtotal.toFixed(2)}`
+      );
     } else {
-      //Se agrega un mensaje de error en consola en caso de algun dato invalido
-      console.error("Precio o cantidad invalidos. Ingrese solo numeros");
+      console.error("Precio o cantidad inválidos. Ingrese solo números");
     }
   }
 }
-//Se indica por medio de consola el el resultado de cada Captura y el Costo Total
+
+//calcular el costo total utilizando reduce
+const costoTotal = productos.reduce(
+  (total, producto) => total + producto.subtotal,
+  0
+);
+
+// Este me mostrara el costo total en consola
 console.log("Costo total: $", costoTotal.toFixed(2));
 
-// Una vez que el programa 1 termina, ejecutamos el programa 2
-setTimeout(() => {
-  // Mensaje para verificar que inicia el programa 2
-  console.log("¡Aqui inicia el segundo programa!");
-
-  // Programa para obtener el monto total y la cantidad de cuotas que indica el usuario
-  const montoTotal = parseFloat(prompt("Ingresa el monto total:"));
-  const cantidadCuotas = parseInt(
-    prompt("Ingrese la cantidad de cuotas a diferir:")
+// Una vez que conozco el costo total lo ocupo para determinar las cuotas a diferir
+const cantidadCuotas = parseInt(
+  prompt("Ingrese la cantidad de cuotas a diferir:")
+);
+if (isNaN(cantidadCuotas) || cantidadCuotas <= 0) {
+  console.error("Por favor, ingresa una cantidad de cuotas válida.");
+} else {
+  //Calcular las cuotas utilizando map y la funcion dividirValores
+  const cuotas = dividirValores(
+    Array(cantidadCuotas).fill(costoTotal),
+    cantidadCuotas
   );
 
-  // Se validan que los datos ingresados sean corretos
-  if (isNaN(montoTotal) || isNaN(cantidadCuotas) || cantidadCuotas <= 0) {
-    console.error(
-      "Por favor, ingresa un monto y una cantidad de cuotas validos."
-    );
-  } else {
-    // Se ejecuta la formula para calcular el valor de cada cuota
-    const valorCuota = montoTotal / cantidadCuotas;
+  // Mostrar el valor de cada cuota
+  console.log(
+    `Usted eligio diferir en ${cantidadCuotas} cuotas y el valor de cada cuota: es $`,
+    cuotas[0].toFixed(2)
+  );
 
-    // Mostramos el resultado por medio de consola
-    console.log("El valor de cada cuota es: $" + valorCuota.toFixed(2));
+  // Mostrar un desglose de las cuotas
+  console.log("Detalle de las cuotas:");
+  cuotas.forEach((cuota, indice) => {
+    console.log(`Cuota ${indice + 1}: $${cuota.toFixed(2)}`);
+  });
+}
 
-    // Por medio de un ciclo for se muestra un desglose de cada cuota en consola
-    for (let i = 1; i <= cantidadCuotas; i++) {
-      console.log(`Cuota ${i}: $${valorCuota.toFixed(2)}`);
-    }
-  }
-}, 0);
+// Mostrar detalles de los productos del array
+console.log("Detalle de la compra:");
+productos.forEach((producto) => {
+  console.log(
+    `${producto.nombre} - Cantidad: ${
+      producto.cantidad
+    } - Subtotal: $${producto.subtotal.toFixed(2)}`
+  );
+});
