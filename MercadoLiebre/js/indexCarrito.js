@@ -1,6 +1,9 @@
-// array de productos
+/*Simulador de carrito de compras donde se realizan las modificacion desde el archivo JS y tambien se agrega la informacion
+dentro del localStorage al ocupar el evento comprar*/
+
 const contenedorProductos = document.getElementById("contenedorCards");
 
+//Array de elementos del carrito
 let productos = [
   {
     id: 1,
@@ -44,6 +47,7 @@ let productos = [
   },
 ];
 
+//se inicializa y se agrega la informacion del carrito dentro del localStorage
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product) => {
@@ -55,6 +59,7 @@ productos.forEach((product) => {
         <p class="precio">$${product.precio}</p>
         `;
 
+  //se crea el boton comprar y el evento click para agregar la informacion al localStorage
   let comprar = document.createElement("button");
   comprar.className = "comprar";
   comprar.innerText = "comprar";
